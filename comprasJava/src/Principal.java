@@ -8,14 +8,13 @@ public class Principal {
 
     public static void main(String[] args) {
         System.out.println("Digite o limite do seu cartão: ");
-        Scanner limite = new Scanner(System.in);
-        double saldo = limite.nextDouble();
+        Scanner scanner = new Scanner(System.in);
+        double saldo = scanner.nextDouble();
 
 
         System.out.println("1: Comprar          0: Sair");
         System.out.println("O que deseja fazer:");
-        Scanner opcao = new Scanner(System.in);
-        int leituraOpcao = opcao.nextInt();
+        int leituraOpcao = scanner.nextInt();
 
         ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 
@@ -23,8 +22,7 @@ public class Principal {
         while (leituraOpcao != 0) {
             if (leituraOpcao == 1) {
                 System.out.println("O que gostaria de comprar: ");
-                Scanner nomeProduto = new Scanner(System.in);
-                String leituraNomeProduto = nomeProduto.nextLine();
+                String leituraNomeProduto = scanner.nextLine();
 
                 System.out.println("Qual é seu preço: ");
                 Scanner precoProduto = new Scanner(System.in);
@@ -47,8 +45,7 @@ public class Principal {
 
             System.out.println("1: Comprar          0: Sair");
             System.out.println("O que deseja fazer:");
-            opcao = new Scanner(System.in);
-            leituraOpcao = opcao.nextInt();
+            leituraOpcao = scanner.nextInt();
 
 
             if (leituraOpcao == 0){
